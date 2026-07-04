@@ -1,0 +1,7 @@
+Flask
+Flask-SocketIO
+eventlet
+requests
+PyGithub
+APScheduler
+pytz

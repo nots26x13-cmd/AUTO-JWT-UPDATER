@@ -1,0 +1,10 @@
+Api1: https://arafatxjwtobb1.vercel.app/api/token
+Api2: https://arafatxjwtobb2.vercel.app/api/token
+Api3: https://arafatxjwtobb3.vercel.app/api/token
+Api4: https://arafatxjwtobb4.vercel.app/api/token
+Api5: https://arafatxjwtobb5.vercel.app/api/token
+Api6: https://arafatxjwtobb6.vercel.app/api/token
+Api7: https://arafatxjwtobb7.vercel.app/api/token
+Api8: https://arafatxjwtobb8.vercel.app/api/token
+Api9: https://arafatxjwtobb9.vercel.app/api/token
+Api10: https://arafatxjwtobb10.vercel.app/api/token
