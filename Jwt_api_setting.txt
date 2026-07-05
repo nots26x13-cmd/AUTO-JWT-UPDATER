@@ -1,5 +1,5 @@
-Api1: https://arafatxjwtobb1.vercel.app/api/token
-Api2: https://arafatxjwtobb2.vercel.app/api/token
+Api1: https://jwt-generator-1.vercel.app/api/token
+Api2: https://jwt-generator-chi.vercel.app/api/token
 Api3: https://arafatxjwtobb3.vercel.app/api/token
 Api4: https://arafatxjwtobb4.vercel.app/api/token
 Api5: https://arafatxjwtobb5.vercel.app/api/token
