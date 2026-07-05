@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Core | DEVIL CODEX</title>
+    <title>Admin Core | S26X AUTO JWT UPDATER PRO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { background-color: #fdf2f8; color: #1e293b; font-family: 'Inter', sans-serif; }
-        .glass-panel { background: #ffffff; border: 1px solid #fbcfe8; box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.15); }
-        .pink-btn { background: linear-gradient(90deg, #ec4899, #be185d, #ec4899); background-size: 200%; transition: all 0.4s ease; color: white; }
-        .pink-btn:hover { background-position: right center; box-shadow: 0 8px 25px -5px rgba(236, 72, 153, 0.5); }
-        .pink-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { background-color: #000; color: #d4d4d8; font-family: 'Inter', sans-serif; }
+        .glass-panel { background: #09090b; border: 1px solid #27272a; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8); }
+        .gray-btn { background: linear-gradient(90deg, #27272a, #3f3f46, #27272a); background-size: 200%; transition: all 0.15s ease; color: white; }
+        .gray-btn:hover { background-position: right center; box-shadow: 0 8px 25px -5px rgba(255, 255, 255, 0.1); }
+        .gray-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="min-h-screen p-4 md:p-8 bg-pink-50">
+<body class="min-h-screen p-4 md:p-8 bg-black">
 
     <div class="max-w-6xl mx-auto space-y-8">
         
-        <div class="glass-panel p-8 rounded-[2rem] flex flex-col md:flex-row justify-between items-center gap-6 shadow-xl relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-400 via-rose-500 to-pink-500"></div>
+        <div class="glass-panel p-8 rounded-[2rem] flex flex-col md:flex-row justify-between items-center gap-6 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-zinc-700 via-zinc-400 to-zinc-700"></div>
             
             <div class="flex items-center gap-6">
-                <div class="w-16 h-16 bg-pink-50 border border-pink-200 rounded-2xl flex items-center justify-center text-pink-600 shadow-sm">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                </div>
+                <img src="https://i.ibb.co/Z0wtdsB/photo-2026-07-04-12-28-24.jpg" alt="Logo" class="w-16 h-16 rounded-2xl shadow-[0_0_15px_rgba(255,255,255,0.05)] border border-zinc-700 object-cover">
                 <div>
-                    <h1 class="text-3xl font-black tracking-tighter uppercase text-slate-800">
-                        DEVIL <span class="text-pink-600">100K</span>
+                    <h1 class="text-3xl font-black tracking-tighter uppercase text-zinc-100">
+                        S26X <span class="text-zinc-500">AUTO</span>
                     </h1>
-                    <p class="text-xs font-bold text-slate-500 tracking-widest mt-1">Token Management Matrix</p>
+                    <p class="text-xs font-bold text-zinc-600 tracking-widest mt-1">JWT UPDATER PRO</p>
                 </div>
             </div>
 
-            <a href="/logout" class="bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 font-black py-3 px-6 rounded-xl text-xs uppercase transition-all flex items-center gap-2 shadow-sm">
+            <a href="/logout" class="bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 font-black py-3 px-6 rounded-xl text-xs uppercase transition-all duration-150 flex items-center gap-2 shadow-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
                 Terminate Session
             </a>
@@ -42,95 +40,95 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="glass-panel rounded-[2rem] p-8 h-fit sticky top-8">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-2 h-8 bg-pink-500 rounded-full shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
-                    <h2 class="text-sm font-black text-slate-800 uppercase tracking-widest">Generate Access</h2>
+                    <div class="w-2 h-8 bg-zinc-500 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.1)]"></div>
+                    <h2 class="text-sm font-black text-white uppercase tracking-widest">Generate Access</h2>
                 </div>
                 
                 <form id="createClientForm" class="space-y-5">
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Client Identity</label>
-                        <input type="text" id="clientName" placeholder="e.g., Alpha Squad" required class="w-full px-5 py-4 rounded-xl text-sm bg-white border border-pink-200 text-slate-800 outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all placeholder-slate-400">
+                        <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider">Client Identity</label>
+                        <input type="text" id="clientName" placeholder="e.g., Alpha Squad" required class="w-full px-5 py-4 rounded-xl text-sm bg-[#050505] border border-zinc-800 text-white outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all duration-150 placeholder-zinc-700">
                     </div>
                     
                     <div class="space-y-2">
-                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-wider flex justify-between">
-                            Custom Token <span class="text-pink-600 bg-pink-50 px-2 py-0.5 rounded text-[8px] border border-pink-100">AUTO-GENERATE IF BLANK</span>
+                        <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-wider flex justify-between">
+                            Custom Token <span class="text-zinc-400 bg-zinc-900 px-2 py-0.5 rounded text-[8px] border border-zinc-700">AUTO-GENERATE IF BLANK</span>
                         </label>
-                        <input type="text" id="customToken" placeholder="DK-XXXX-XXXX" class="w-full px-5 py-4 rounded-xl text-sm bg-white border border-pink-200 text-slate-800 outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all placeholder-slate-400 font-mono">
+                        <input type="text" id="customToken" placeholder="DK-XXXX-XXXX" class="w-full px-5 py-4 rounded-xl text-sm bg-[#050505] border border-zinc-800 text-white outline-none focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 transition-all duration-150 placeholder-zinc-700 font-mono">
                     </div>
 
-                    <button type="submit" id="submitBtn" class="w-full mt-4 pink-btn font-black py-4 rounded-xl text-xs uppercase tracking-widest transition-all transform hover:-translate-y-1">
+                    <button type="submit" id="submitBtn" class="w-full mt-4 gray-btn font-black py-4 rounded-xl text-xs uppercase tracking-widest transition-all transform hover:-translate-y-1 border border-zinc-700">
                         Mint Token
                     </button>
                 </form>
             </div>
 
             <div class="lg:col-span-2 glass-panel rounded-[2rem] p-8">
-                <div class="flex items-center justify-between mb-8 pb-4 border-b border-pink-100">
+                <div class="flex items-center justify-between mb-8 pb-4 border-b border-zinc-800">
                     <div class="flex items-center gap-3">
-                        <div class="w-2 h-8 bg-rose-500 rounded-full shadow-[0_0_10px_rgba(244,63,94,0.5)]"></div>
-                        <h2 class="text-sm font-black text-slate-800 uppercase tracking-widest">Active Matrix</h2>
+                        <div class="w-2 h-8 bg-zinc-300 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.2)]"></div>
+                        <h2 class="text-sm font-black text-white uppercase tracking-widest">Active Matrix</h2>
                     </div>
-                    <span class="bg-pink-50 text-pink-600 border border-pink-200 px-4 py-1.5 rounded-lg text-xs font-black shadow-sm">
+                    <span class="bg-zinc-900 text-zinc-300 border border-zinc-700 px-4 py-1.5 rounded-lg text-xs font-black shadow-sm">
                         {{ users|length }} NODES
                     </span>
                 </div>
 
                 <div class="space-y-4">
                     {% if not users %}
-                        <div class="text-center py-12 border-2 border-dashed border-pink-200 rounded-2xl bg-pink-50/50">
-                            <p class="text-slate-500 text-sm font-bold uppercase tracking-widest">Matrix Empty</p>
+                        <div class="text-center py-12 border-2 border-dashed border-zinc-800 rounded-2xl bg-zinc-900/50">
+                            <p class="text-zinc-600 text-sm font-bold uppercase tracking-widest">Matrix Empty</p>
                         </div>
                     {% endif %}
                     
                     {% for token, details in users.items() %}
-                    <div class="bg-white border border-pink-200 hover:border-pink-400 rounded-2xl p-5 flex flex-col justify-between items-start gap-4 transition-all group shadow-sm">
+                    <div class="bg-[#050505] border border-zinc-800 hover:border-zinc-600 rounded-2xl p-5 flex flex-col justify-between items-start gap-4 transition-all duration-150 group shadow-sm">
                         
                         <div class="flex justify-between w-full items-start">
                             <div class="flex-1">
                                 <div class="flex items-center gap-3 mb-1">
-                                    <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
-                                    <a href="/admin_login_as/{{ token }}" title="Login as {{ details.name }}" class="font-black text-slate-800 text-xl hover:text-pink-600 transition-colors cursor-pointer flex items-center gap-2 group/link">
+                                    <div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+                                    <a href="/admin_login_as/{{ token }}" title="Login as {{ details.name }}" class="font-black text-white text-xl hover:text-zinc-300 transition-colors cursor-pointer flex items-center gap-2 group/link">
                                         {{ details.name }}
-                                        <svg class="w-5 h-5 text-pink-300 group-hover/link:text-pink-600 group-hover/link:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                                        <svg class="w-5 h-5 text-zinc-600 group-hover/link:text-zinc-300 group-hover/link:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                                     </a>
                                 </div>
                                 <div class="flex flex-wrap items-center gap-3 mt-2">
-                                    <span class="text-xs font-mono text-pink-600 bg-pink-50 border border-pink-200 px-3 py-1 rounded-md shadow-sm">
+                                    <span class="text-xs font-mono text-zinc-300 bg-zinc-900 border border-zinc-700 px-3 py-1 rounded-md shadow-sm">
                                         {{ token }}
                                     </span>
-                                    <span class="text-[10px] text-slate-500 font-bold uppercase flex items-center gap-1">
+                                    <span class="text-[10px] text-zinc-500 font-bold uppercase flex items-center gap-1">
                                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                         {{ details.created }}
                                     </span>
                                 </div>
                             </div>
                             
-                            <button onclick="deleteClient('{{ token }}')" class="bg-rose-50 border border-rose-200 text-rose-500 hover:bg-rose-500 hover:text-white hover:shadow-lg p-3 rounded-xl transition-all self-start">
+                            <button onclick="deleteClient('{{ token }}')" class="bg-zinc-900 border border-zinc-800 text-zinc-500 hover:border-red-900/50 hover:bg-red-900/20 hover:text-red-500 p-3 rounded-xl transition-all duration-150 self-start">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                             </button>
                         </div>
 
-                        <div class="grid grid-cols-5 gap-3 w-full mt-2 pt-4 border-t border-pink-100">
-                            <div class="bg-pink-50 rounded-xl p-3 text-center border border-pink-100">
-                                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Tasks</div>
-                                <div class="text-xl font-black text-pink-600">{{ details.total_tasks }}</div>
+                        <div class="grid grid-cols-5 gap-3 w-full mt-2 pt-4 border-t border-zinc-800">
+                            <div class="bg-zinc-900/80 rounded-xl p-3 text-center border border-zinc-800">
+                                <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Tasks</div>
+                                <div class="text-xl font-black text-zinc-300">{{ details.total_tasks }}</div>
                             </div>
-                            <div class="bg-pink-50 rounded-xl p-3 text-center border border-pink-100">
-                                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Active</div>
-                                <div class="text-xl font-black text-rose-500">{{ details.active_tasks }}</div>
+                            <div class="bg-zinc-900/80 rounded-xl p-3 text-center border border-zinc-800">
+                                <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Active</div>
+                                <div class="text-xl font-black text-emerald-400">{{ details.active_tasks }}</div>
                             </div>
-                            <div class="bg-pink-50 rounded-xl p-3 text-center border border-pink-100">
-                                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Tokens</div>
-                                <div class="text-xl font-black text-fuchsia-500">{{ details.total_tokens }}</div>
+                            <div class="bg-zinc-900/80 rounded-xl p-3 text-center border border-zinc-800">
+                                <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Tokens</div>
+                                <div class="text-xl font-black text-blue-400">{{ details.total_tokens }}</div>
                             </div>
-                            <div class="bg-pink-50 rounded-xl p-3 text-center border border-pink-100">
-                                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Banned</div>
-                                <div class="text-xl font-black text-red-600">{{ details.total_bans|default(0) }}</div>
+                            <div class="bg-zinc-900/80 rounded-xl p-3 text-center border border-zinc-800">
+                                <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Banned</div>
+                                <div class="text-xl font-black text-red-500">{{ details.total_bans|default(0) }}</div>
                             </div>
-                            <div class="bg-pink-50 rounded-xl p-3 text-center border border-pink-100">
-                                <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">Files</div>
-                                <div class="text-xl font-black text-slate-700">{{ details.files_count }}</div>
+                            <div class="bg-zinc-900/80 rounded-xl p-3 text-center border border-zinc-800">
+                                <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1">Files</div>
+                                <div class="text-xl font-black text-zinc-400">{{ details.files_count }}</div>
                             </div>
                         </div>
 
