@@ -27,7 +27,7 @@ socketio = SocketIO(app, async_mode='eventlet', cors_allowed_origins="*")
 
 # --- SECURITY & CONFIGURATION ---
 app.secret_key = "devil_super_secret_session_key_do_not_share"
-ADMIN_KEY = "XDEVIL" 
+ADMIN_KEY = "S26X" 
 
 USERS_FILE = os.path.join(BASE_DIR, 'users.json')
 JWT_SETTING_FILE = os.path.join(BASE_DIR, 'Jwt_api_setting.txt')
