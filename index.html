@@ -3,237 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S26X AUTO JWT UPDATER PRO | Client Dashboard</title>
+    <title>DEVIL 100K | Client Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Fira+Code:wght@500&display=swap');
         
-        body { background-color: #000; color: #d4d4d8; font-family: 'Inter', sans-serif; }
+        body { background-color: #fdf2f8; color: #1e293b; font-family: 'Inter', sans-serif; }
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #fdf2f8; }
+        ::-webkit-scrollbar-thumb { background: #fbcfe8; border-radius: 4px; }
         
-        .gray-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .pink-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
         input[type="text"], input[type="password"], input[type="time"], select {
-            background: #09090b; border: 1px solid #27272a; color: #f4f4f5; transition: all 0.15s ease;
+            background: #ffffff; border: 1px solid #fce7f3; color: #1e293b; transition: all 0.3s ease;
         }
-        input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(1); opacity: 0.5; cursor: pointer; }
-        input:focus, select:focus { border-color: #52525b; box-shadow: 0 0 15px rgba(255, 255, 255, 0.05); outline: none; }
+        input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(0.4) sepia(1) saturate(10) hue-rotate(300deg); opacity: 0.6; cursor: pointer; }
+        input:focus, select:focus { border-color: #ec4899; box-shadow: 0 0 15px rgba(236, 72, 153, 0.2); outline: none; }
         
-        .gray-btn { position: relative; z-index: 1; background: linear-gradient(90deg, #27272a, #3f3f46, #27272a); background-size: 200%; transition: all 0.15s ease; color: white;}
-        .gray-btn:hover { background-position: right center; box-shadow: 0 8px 25px -5px rgba(255, 255, 255, 0.1); }
+        .pink-btn { position: relative; z-index: 1; background: linear-gradient(90deg, #ec4899, #be185d, #ec4899); background-size: 200%; transition: all 0.4s ease; color: white;}
+        .pink-btn:hover { background-position: right center; box-shadow: 0 8px 25px -5px rgba(236, 72, 153, 0.5); }
 
-        .glass-card { background: #09090b; border: 1px solid #27272a; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8); }
+        .glass-card { background: #ffffff; border: 1px solid #fbcfe8; box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.15); }
         
-        .cursor { display: inline-block; width: 8px; height: 1em; background-color: #a1a1aa; animation: blink 1s step-end infinite; vertical-align: text-bottom; margin-left: 4px;}
+        .cursor { display: inline-block; width: 8px; height: 1em; background-color: #ec4899; animation: blink 1s step-end infinite; vertical-align: text-bottom; margin-left: 4px;}
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
-        .task-stopped { opacity: 0.5; filter: grayscale(100%); transition: all 0.15s; }
-        .stat-value { transition: color 0.15s ease, transform 0.15s ease; display: inline-block; }
+        .task-stopped { opacity: 0.5; filter: grayscale(80%); transition: all 0.3s; }
+        .stat-value { transition: color 0.3s ease, transform 0.3s ease; display: inline-block; }
 
-        .s26x-overlay {
-            position: fixed; inset: 0; background: #000; z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 1; transition: opacity 0.15s ease-in-out;
+        .devil-overlay {
+            position: fixed; inset: 0; background: #050000; z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 1; transition: opacity 0.3s ease-in-out;
         }
-        .s26x-overlay.hidden-overlay { opacity: 0; pointer-events: none; }
-        .s26x-text {
-            font-size: 4rem; font-weight: 900; letter-spacing: 0.8rem; color: #fff; text-shadow: 0 0 10px #fff, 0 0 20px #888; animation: revealS26X 0.5s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .devil-overlay.hidden-overlay { opacity: 0; pointer-events: none; }
+        .devil-text {
+            font-size: 4rem; font-weight: 900; letter-spacing: 0.8rem; color: #ff0000; text-shadow: 0 0 10px #ff0000, 0 0 30px #8b0000, 0 0 50px #ff0000; animation: revealDevil 1s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275), glitch 0.2s infinite alternate;
         }
-        @keyframes revealS26X { 0% { transform: scale(0.5); opacity: 0; } 50% { opacity: 1; } 100% { transform: scale(1.1); opacity: 1; } }
+        @keyframes revealDevil { 0% { transform: scale(0.5); opacity: 0; } 50% { opacity: 1; } 100% { transform: scale(1.1); opacity: 1; } }
+        @keyframes glitch { 0% { text-shadow: 3px 3px #ff0000, -3px -3px #000; } 100% { text-shadow: -3px -3px #ff0000, 3px 3px #000; } }
     </style>
 </head>
-<body class="min-h-screen p-4 md:p-8 bg-black relative overflow-x-hidden">
+<body class="min-h-screen p-4 md:p-8 bg-pink-50 relative overflow-x-hidden">
 
-    <div id="pageS26xOverlay" class="s26x-overlay">
-        <h1 class="s26x-text">S 2 6 X</h1>
+    <div id="pageDevilOverlay" class="devil-overlay">
+        <h1 class="devil-text">D E V I L</h1>
     </div>
 
-    <div id="uploadToast" class="fixed top-8 right-8 z-[100] transform transition-all duration-150 translate-x-[150%] opacity-0 pointer-events-none">
-        <div class="bg-zinc-900 border-l-4 border-zinc-500 rounded-r-xl shadow-2xl shadow-black p-5 flex items-start gap-4 min-w-[320px]">
-            <div class="bg-zinc-800 p-2.5 rounded-full text-zinc-300 mt-1 border border-zinc-700">
+    <div id="uploadToast" class="fixed top-8 right-8 z-[100] transform transition-all duration-300 translate-x-[150%] opacity-0 pointer-events-none">
+        <div class="bg-white border-l-4 border-pink-500 rounded-r-xl shadow-[0_20px_50px_-10px_rgba(236,72,153,0.4)] p-5 flex items-start gap-4 min-w-[320px]">
+            <div class="bg-pink-100 p-2.5 rounded-full text-pink-500 mt-1 shadow-inner">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
             </div>
             <div class="w-full">
-                <h4 class="text-sm font-black text-white uppercase tracking-widest mb-0.5">Upload Success</h4>
-                <p class="text-xs text-zinc-400 mb-3 font-medium">Database merged securely.</p>
-                <div class="bg-black rounded-lg p-3 border border-zinc-800 space-y-1.5 w-full">
+                <h4 class="text-sm font-black text-slate-800 uppercase tracking-widest mb-0.5">Upload Success</h4>
+                <p class="text-xs text-slate-500 mb-3 font-medium">Database merged securely.</p>
+                <div class="bg-pink-50 rounded-lg p-3 border border-pink-100 space-y-1.5 w-full">
                     <div class="flex justify-between items-center text-[10px] font-bold">
-                        <span class="text-zinc-500 uppercase tracking-wider">Owner</span>
-                        <span id="toastUser" class="text-zinc-300 bg-zinc-900 px-2 py-0.5 rounded border border-zinc-800"></span>
+                        <span class="text-pink-500 uppercase tracking-wider">Owner</span>
+                        <span id="toastUser" class="text-slate-700 bg-white px-2 py-0.5 rounded shadow-sm"></span>
                     </div>
                     <div class="flex justify-between items-center text-[10px] font-bold">
-                        <span class="text-zinc-500 uppercase tracking-wider">File</span>
-                        <span id="toastFile" class="text-zinc-300 font-mono truncate max-w-[120px]"></span>
+                        <span class="text-pink-500 uppercase tracking-wider">File</span>
+                        <span id="toastFile" class="text-slate-700 font-mono truncate max-w-[120px]"></span>
                     </div>
-                    <div class="flex justify-between items-center text-[10px] font-bold pt-1 border-t border-zinc-800">
-                        <span class="text-zinc-500 uppercase tracking-wider">Loaded</span>
-                        <span class="text-zinc-300"><span id="toastCount" class="text-white font-black text-xs"></span> ACCOUNTS</span>
+                    <div class="flex justify-between items-center text-[10px] font-bold pt-1 border-t border-pink-200">
+                        <span class="text-pink-500 uppercase tracking-wider">Loaded</span>
+                        <span class="text-slate-700"><span id="toastCount" class="text-rose-600 font-black text-xs"></span> ACCOUNTS</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="deleteToast" class="fixed top-8 right-8 z-[100] transform transition-all duration-150 translate-x-[150%] opacity-0 pointer-events-none mt-[160px]">
-        <div class="bg-zinc-900 border-l-4 border-red-500 rounded-r-xl shadow-2xl shadow-black p-5 flex items-start gap-4 min-w-[320px]">
-            <div class="bg-red-900/30 p-2.5 rounded-full text-red-500 mt-1 border border-red-900/50">
+    <div id="deleteToast" class="fixed top-8 right-8 z-[100] transform transition-all duration-300 translate-x-[150%] opacity-0 pointer-events-none mt-[160px]">
+        <div class="bg-white border-l-4 border-rose-500 rounded-r-xl shadow-[0_20px_50px_-10px_rgba(244,63,94,0.4)] p-5 flex items-start gap-4 min-w-[320px]">
+            <div class="bg-rose-100 p-2.5 rounded-full text-rose-500 mt-1 shadow-inner">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
             </div>
             <div class="w-full">
-                <h4 class="text-sm font-black text-white uppercase tracking-widest mb-0.5">File Purged</h4>
-                <p class="text-xs text-zinc-400 font-medium">Account file <span id="delToastFile" class="font-bold text-red-400 font-mono"></span> deleted.</p>
+                <h4 class="text-sm font-black text-slate-800 uppercase tracking-widest mb-0.5">File Purged</h4>
+                <p class="text-xs text-slate-500 font-medium">Account file <span id="delToastFile" class="font-bold text-rose-600 font-mono"></span> deleted.</p>
             </div>
         </div>
     </div>
 
-    <div id="taskDeleteToast" class="fixed top-8 right-8 z-[100] transform transition-all duration-150 translate-x-[150%] opacity-0 pointer-events-none mt-[240px]">
-        <div class="bg-zinc-900 border-l-4 border-red-600 rounded-r-xl shadow-2xl shadow-black p-5 flex items-start gap-4 min-w-[320px]">
-            <div class="bg-red-900/30 p-2.5 rounded-full text-red-500 mt-1 border border-red-900/50">
+    <div id="taskDeleteToast" class="fixed top-8 right-8 z-[100] transform transition-all duration-300 translate-x-[150%] opacity-0 pointer-events-none mt-[240px]">
+        <div class="bg-white border-l-4 border-rose-600 rounded-r-xl shadow-[0_20px_50px_-10px_rgba(225,29,72,0.4)] p-5 flex items-start gap-4 min-w-[320px]">
+            <div class="bg-rose-100 p-2.5 rounded-full text-rose-600 mt-1 shadow-inner">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
             </div>
             <div class="w-full">
-                <h4 class="text-sm font-black text-white uppercase tracking-widest mb-0.5">Task Purged</h4>
-                <p class="text-xs text-zinc-400 font-medium">Task ID <span id="delToastTaskId" class="font-bold text-red-400 font-mono"></span> erased from matrix.</p>
+                <h4 class="text-sm font-black text-slate-800 uppercase tracking-widest mb-0.5">Task Purged</h4>
+                <p class="text-xs text-slate-500 font-medium">Task ID <span id="delToastTaskId" class="font-bold text-rose-600 font-mono"></span> erased from matrix.</p>
             </div>
         </div>
     </div>
 
     <div class="max-w-7xl mx-auto space-y-8 relative">
-        <div class="bg-[#050505] border border-zinc-800 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden shadow-2xl shadow-black">
-            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-zinc-700 via-zinc-400 to-zinc-700"></div>
+        <div class="bg-white border border-pink-200 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden shadow-xl shadow-pink-100/50">
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-300 via-pink-500 to-rose-400"></div>
             
-            <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-                <img src="https://i.ibb.co/Z0wtdsB/photo-2026-07-04-12-28-24.jpg" alt="Logo" class="w-16 h-16 rounded-2xl shadow-[0_0_15px_rgba(255,255,255,0.05)] border border-zinc-700 object-cover">
-                <div>
-                    <h1 class="text-3xl font-black tracking-tighter uppercase flex justify-center md:justify-start gap-2">
-                        <span class="bg-gradient-to-r from-zinc-200 to-zinc-500 gray-text">S26X AUTO</span>
-                    </h1>
-                    <h2 class="text-[11px] font-bold text-zinc-500 tracking-widest uppercase mt-1">JWT Updater Pro - Dashboard</h2>
-                    
-                    <div class="flex items-center gap-4 mt-2 justify-center md:justify-start">
-                        <span class="bg-zinc-900 text-zinc-300 border border-zinc-700 px-3 py-0.5 rounded-full text-[10px] font-black tracking-wider flex items-center gap-2 shadow-sm">
-                            <div class="w-1.5 h-1.5 bg-zinc-400 rounded-full animate-pulse shadow-[0_0_8px_#a1a1aa]"></div> ONLINE
-                        </span>
-                        <a href="/logout" class="bg-zinc-900 text-zinc-400 border border-zinc-700 hover:bg-zinc-800 px-3 py-0.5 rounded-full text-[10px] font-black tracking-wider flex items-center gap-1 transition-colors shadow-sm">
-                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
-                            LOGOUT
-                        </a>
-                    </div>
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-black tracking-tighter uppercase flex justify-center md:justify-start gap-2">
+                    <span class="bg-gradient-to-r from-pink-500 to-rose-500 pink-text">DEVIL</span>
+                    <span class="text-slate-800">100K</span>
+                </h1>
+                <div class="flex items-center gap-4 mt-2 justify-center md:justify-start">
+                    <span class="text-[11px] font-bold text-slate-500 tracking-widest uppercase">CLIENT DASHBOARD</span>
+                    <span class="bg-pink-50 text-pink-600 border border-pink-200 px-3 py-0.5 rounded-full text-[10px] font-black tracking-wider flex items-center gap-2 shadow-sm">
+                        <div class="w-1.5 h-1.5 bg-pink-500 rounded-full animate-pulse shadow-[0_0_8px_#ec4899]"></div> ONLINE
+                    </span>
+                    <a href="/logout" class="bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-100 px-3 py-0.5 rounded-full text-[10px] font-black tracking-wider flex items-center gap-1 transition-colors shadow-sm">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+                        LOGOUT
+                    </a>
                 </div>
             </div>
 
             <div class="flex gap-4 items-center flex-wrap justify-center">
-                <div class="bg-[#0a0a0a] border border-zinc-800 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
-                    <div id="stat-total-tasks" class="text-3xl font-black text-zinc-100 leading-none stat-value">{{ total_tasks }}</div>
-                    <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mt-2">Tasks</div>
+                <div class="bg-pink-50 border border-pink-100 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
+                    <div id="stat-total-tasks" class="text-3xl font-black text-pink-600 leading-none stat-value">{{ total_tasks }}</div>
+                    <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-2">Tasks</div>
                 </div>
-                <div class="bg-[#0a0a0a] border border-zinc-800 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
-                    <div id="stat-active-tasks" class="text-3xl font-black text-zinc-300 leading-none stat-value">{{ active_tasks }}</div>
-                    <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mt-2">Active</div>
+                <div class="bg-pink-50 border border-pink-100 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
+                    <div id="stat-active-tasks" class="text-3xl font-black text-rose-500 leading-none stat-value">{{ active_tasks }}</div>
+                    <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-2">Active</div>
                 </div>
-                <div class="bg-[#0a0a0a] border border-zinc-800 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
-                    <div id="stat-total-tokens" class="text-3xl font-black text-zinc-200 leading-none stat-value">{{ total_tokens }}</div>
-                    <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mt-2">Tokens</div>
+                <div class="bg-pink-50 border border-pink-100 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
+                    <div id="stat-total-tokens" class="text-3xl font-black text-fuchsia-500 leading-none stat-value">{{ total_tokens }}</div>
+                    <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-2">Tokens</div>
                 </div>
-                <div class="bg-[#0a0a0a] border border-zinc-800 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
-                    <div id="stat-total-bans" class="text-3xl font-black text-red-500 leading-none stat-value">{{ total_bans }}</div>
-                    <div class="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mt-2">Banned</div>
+                <div class="bg-pink-50 border border-pink-100 rounded-2xl p-4 text-center min-w-[85px] shadow-sm">
+                    <div id="stat-total-bans" class="text-3xl font-black text-red-600 leading-none stat-value">{{ total_bans }}</div>
+                    <div class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mt-2">Banned</div>
                 </div>
             </div>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4 py-2 border-b border-zinc-800">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 py-2 border-b border-pink-200">
             <div class="font-['Fira_Code'] text-sm">
-                <span class="text-zinc-600">> User @{{ client_name }}:~# </span>
-                <span id="typewriter" class="text-zinc-300 font-bold"></span><span class="cursor"></span>
+                <span class="text-slate-500">> User @{{ client_name }}:~# </span>
+                <span id="typewriter" class="text-pink-600 font-bold"></span><span class="cursor"></span>
             </div>
             
             <div class="flex gap-4 flex-wrap">
-                <button onclick="openFileManager()" class="text-red-400 hover:text-white text-xs font-bold py-2 px-4 rounded border border-zinc-700 hover:border-red-500 hover:bg-red-900/30 shadow-sm transition-all duration-150">
+                <button onclick="openFileManager()" class="text-rose-600 hover:text-white text-xs font-bold py-2 px-4 rounded border border-rose-200 hover:border-rose-400 hover:bg-rose-500 shadow-sm transition-all">
                     [ DELETE ACCOUNTS FILE ]
                 </button>
                 
-                <button onclick="document.getElementById('fileIn').click()" class="text-zinc-400 hover:text-white text-xs font-bold py-2 px-4 rounded border border-zinc-700 hover:border-zinc-500 bg-[#0a0a0a] hover:bg-zinc-800 shadow-sm transition-all duration-150">
+                <button onclick="document.getElementById('fileIn').click()" class="text-slate-600 hover:text-pink-600 text-xs font-bold py-2 px-4 rounded border border-pink-200 hover:border-pink-400 bg-white shadow-sm transition-all">
                     [ UPLOAD ACCOUNTS ]
                 </button>
                 <input type="file" id="fileIn" class="hidden" accept=".json" onchange="uploadFile(this)">
                 
-                <button onclick="openWizard()" class="gray-btn font-black py-2 px-6 rounded text-xs uppercase tracking-widest shadow-md border border-zinc-700">
+                <button onclick="openWizard()" class="pink-btn font-black py-2 px-6 rounded text-xs uppercase tracking-widest shadow-md">
                     + NEW AUTO TASK
                 </button>
             </div>
         </div>
 
         <div id="dashboard-container">
-            <div id="empty-state" class="glass-card border-dashed border-zinc-700 p-16 rounded-3xl text-center flex flex-col items-center justify-center mt-10 transition-all duration-200 {% if tasks %}hidden{% endif %}">
-                <p class="text-zinc-500 text-sm font-bold uppercase tracking-widest mb-4">Awaiting Directives</p>
-                <button onclick="openWizard()" class="text-zinc-300 text-xs font-black underline underline-offset-4 hover:text-white transition-colors">CONFIGURE NEW SYSTEM</button>
+            <div id="empty-state" class="glass-card border-dashed border-pink-300 p-16 rounded-3xl text-center flex flex-col items-center justify-center mt-10 transition-all duration-500 {% if tasks %}hidden{% endif %}">
+                <p class="text-slate-500 text-sm font-bold uppercase tracking-widest mb-4">Awaiting Directives</p>
+                <button onclick="openWizard()" class="text-pink-500 text-xs font-black underline underline-offset-4 hover:text-pink-400">CONFIGURE NEW SYSTEM</button>
             </div>
 
             <div id="tasks-grid" class="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-6 {% if not tasks %}hidden{% endif %}">
                 {% for tid, t in tasks.items() %}
-                <div id="task-card-{{ t.id }}" class="glass-card rounded-3xl p-6 flex flex-col justify-between relative group transition-all duration-200 {% if t.status == 'Stopped' %}task-stopped hover:opacity-100 hover:filter-none{% endif %}">
+                <div id="task-card-{{ t.id }}" class="glass-card rounded-3xl p-6 flex flex-col justify-between relative group transition-all duration-500 {% if t.status == 'Stopped' %}task-stopped hover:opacity-100 hover:filter-none{% endif %}">
                     
                     <div class="flex justify-between items-start mb-6">
                         <div>
                             <div class="flex items-center gap-3">
-                                <span class="text-[10px] font-black text-zinc-400 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">ID: {{ t.id }}</span>
-                                <span id="status-badge-{{ t.id }}" class="text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase {{ 'bg-red-900/30 text-red-400 border border-red-900/50' if t.status == 'Stopped' else 'bg-zinc-800 text-zinc-300 border border-zinc-600' }}">
+                                <span class="text-[10px] font-black text-slate-700 bg-pink-50 px-2 py-1 rounded border border-pink-200">ID: {{ t.id }}</span>
+                                <span id="status-badge-{{ t.id }}" class="text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase {{ 'bg-rose-100 text-rose-600 border border-rose-200' if t.status == 'Stopped' else 'bg-green-100 text-green-600 border border-green-200' }}">
                                     {{ t.status }}
                                 </span>
                             </div>
-                            <h3 class="font-black text-xl text-white mt-3 truncate max-w-[250px]" title="{{ t.repo_name }}">{{ t.repo_name }}</h3>
+                            <h3 class="font-black text-xl text-slate-800 mt-3 truncate max-w-[250px]" title="{{ t.repo_name }}">{{ t.repo_name }}</h3>
                         </div>
                         <div class="flex gap-2">
-                            <button onclick="toggleTask('{{ t.id }}')" id="toggle-btn-{{ t.id }}" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-400 p-2.5 rounded-xl transition-all shadow-sm">
+                            <button onclick="toggleTask('{{ t.id }}')" id="toggle-btn-{{ t.id }}" class="bg-pink-50 hover:bg-pink-100 border border-pink-200 text-slate-600 p-2.5 rounded-xl transition-all shadow-sm">
                                 {% if t.status == 'Stopped' %}
-                                <svg class="w-5 h-5 text-zinc-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                 {% else %}
-                                <svg class="w-5 h-5 text-zinc-300" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
                                 {% endif %}
                             </button>
-                            <button onclick="triggerTaskDeleteConfirmation('{{ t.id }}')" class="bg-zinc-900 hover:bg-red-900/30 border border-zinc-700 hover:border-red-900/50 text-zinc-500 hover:text-red-400 p-2.5 rounded-xl transition-all shadow-sm">
+                            <button onclick="triggerTaskDeleteConfirmation('{{ t.id }}')" class="bg-pink-50 hover:bg-rose-100 border border-pink-200 hover:border-rose-300 text-slate-400 hover:text-rose-600 p-2.5 rounded-xl transition-all shadow-sm">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                             </button>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-zinc-900/50 p-3 rounded-xl border border-zinc-800">
-                            <p class="text-[9px] text-zinc-500 font-bold uppercase mb-1">Target</p>
-                            <p class="text-xs text-zinc-300 font-mono truncate font-bold">{{ t.file_path.split('/')[-1] }}</p>
+                        <div class="bg-pink-50 p-3 rounded-xl border border-pink-100">
+                            <p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Target</p>
+                            <p class="text-xs text-slate-800 font-mono truncate font-bold">{{ t.file_path.split('/')[-1] }}</p>
                         </div>
-                        <div class="bg-zinc-900/50 p-3 rounded-xl border border-zinc-800">
-                            <p class="text-[9px] text-zinc-500 font-bold uppercase mb-1">Source</p>
-                            <p class="text-xs text-zinc-300 font-mono truncate font-bold">{{ t.account_file }}</p>
+                        <div class="bg-pink-50 p-3 rounded-xl border border-pink-100">
+                            <p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Source</p>
+                            <p class="text-xs text-slate-800 font-mono truncate font-bold">{{ t.account_file }}</p>
                         </div>
                     </div>
 
                     <div class="mb-6">
                         <div class="flex flex-wrap gap-2">
                             {% for time in t.times %}
-                            <span class="text-[10px] font-bold bg-[#111] text-zinc-300 px-2.5 py-1 rounded border border-zinc-700 shadow-sm">
+                            <span class="text-[10px] font-bold bg-white text-pink-600 px-2.5 py-1 rounded border border-pink-200 shadow-sm">
                                 {{ time }}
                             </span>
                             {% endfor %}
                         </div>
                     </div>
 
-                    <div class="pt-4 border-t border-zinc-800 flex justify-between items-center">
+                    <div class="pt-4 border-t border-pink-100 flex justify-between items-center">
                         <div>
-                            <p id="sync-text-{{ t.id }}" class="text-[10px] font-bold text-zinc-500 uppercase flex items-center gap-1">
+                            <p id="sync-text-{{ t.id }}" class="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">
                                 SYNC: {{ t.last_run }}
                             </p>
                             <div class="flex items-baseline gap-3 mt-1">
-                                <div id="token-count-{{ t.id }}" class="text-3xl font-black text-white stat-value">
-                                    {{ t.last_count }} <span class="text-[10px] text-zinc-500 tracking-widest font-bold -ml-1">TOKENS</span>
+                                <div id="token-count-{{ t.id }}" class="text-3xl font-black text-slate-800 stat-value">
+                                    {{ t.last_count }} <span class="text-[10px] text-pink-500 tracking-widest font-bold -ml-1">TOKENS</span>
                                 </div>
-                                <div id="ban-count-{{ t.id }}" class="text-xs font-black text-red-500">
+                                <div id="ban-count-{{ t.id }}" class="text-xs font-black text-rose-600">
                                     BAN: {{ t.last_ban_count|default(0) }}
                                 </div>
                             </div>
                         </div>
-                        <button id="instant-btn-{{ t.id }}" onclick="instantSync('{{ t.id }}')" class="gray-btn border border-zinc-700 text-white px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2 shadow-md">
+                        <button id="instant-btn-{{ t.id }}" onclick="instantSync('{{ t.id }}')" class="pink-btn text-white px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2 shadow-md">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                             INSTANT
                         </button>
@@ -244,85 +242,85 @@
         </div>
     </div>
 
-    <div id="wizardModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-150">
-        <div class="bg-[#0a0a0a] border border-zinc-800 rounded-3xl w-full max-w-xl relative shadow-2xl transform scale-95 transition-transform duration-150" id="wizardContent">
-            <button type="button" onclick="closeWizard()" class="absolute top-6 right-6 text-zinc-500 hover:text-white bg-zinc-900 p-2 rounded-full transition-colors border border-zinc-700">
+    <div id="wizardModal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white border border-pink-200 rounded-3xl w-full max-w-xl relative shadow-2xl transform scale-95 transition-transform duration-300" id="wizardContent">
+            <button type="button" onclick="closeWizard()" class="absolute top-6 right-6 text-slate-400 hover:text-pink-600 bg-pink-50 p-2 rounded-full transition-colors border border-pink-200">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
             <div class="p-8 md:p-10">
-                <h2 class="text-xl font-black text-white uppercase mb-6 flex items-center gap-3 tracking-wider">
-                    <span class="bg-zinc-800 text-zinc-300 px-2 py-1 rounded text-xs border border-zinc-700">SYS</span>
+                <h2 class="text-xl font-black text-slate-800 uppercase mb-6 flex items-center gap-3 tracking-wider">
+                    <span class="bg-pink-100 text-pink-600 px-2 py-1 rounded text-xs border border-pink-200">SYS</span>
                     New Automation
                 </h2>
                 <div class="flex gap-2 mb-8">
-                    <div id="ind-1" class="h-1 flex-1 rounded-full bg-zinc-400 transition-colors"></div>
-                    <div id="ind-2" class="h-1 flex-1 rounded-full bg-zinc-800 transition-colors"></div>
-                    <div id="ind-3" class="h-1 flex-1 rounded-full bg-zinc-800 transition-colors"></div>
+                    <div id="ind-1" class="h-1 flex-1 rounded-full bg-pink-500 transition-colors"></div>
+                    <div id="ind-2" class="h-1 flex-1 rounded-full bg-pink-100 transition-colors"></div>
+                    <div id="ind-3" class="h-1 flex-1 rounded-full bg-pink-100 transition-colors"></div>
                 </div>
                 <form id="taskForm" class="space-y-6">
                     <div id="step-1" class="wizard-step">
                         <div class="space-y-4">
                             <div>
-                                <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">GitHub PAT Token</label>
-                                <input type="password" id="i_token" name="github_token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" class="w-full px-5 py-4 rounded-xl text-sm font-mono focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500" required>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">GitHub PAT Token</label>
+                                <input type="password" id="i_token" name="github_token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" class="w-full px-5 py-4 rounded-xl text-sm font-mono focus:border-pink-500 focus:ring-1 focus:ring-pink-500" required>
                             </div>
                             <div>
-                                <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">Target Repository</label>
-                                <input type="text" id="i_repo" name="repo_name" placeholder="username/repository" class="w-full px-5 py-4 rounded-xl text-sm font-mono focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500" required>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Target Repository</label>
+                                <input type="text" id="i_repo" name="repo_name" placeholder="username/repository" class="w-full px-5 py-4 rounded-xl text-sm font-mono focus:border-pink-500 focus:ring-1 focus:ring-pink-500" required>
                             </div>
                         </div>
                         <div class="mt-8 flex justify-end">
-                            <button type="button" onclick="nextStep(2)" class="bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-600 font-black py-3 px-8 rounded-xl text-xs uppercase tracking-widest transition-all shadow-sm">Next</button>
+                            <button type="button" onclick="nextStep(2)" class="bg-pink-100 text-pink-700 hover:bg-pink-200 font-black py-3 px-8 rounded-xl text-xs uppercase tracking-widest transition-all shadow-sm">Next</button>
                         </div>
                     </div>
                     <div id="step-2" class="wizard-step hidden">
                         <div class="space-y-4">
                             <div>
-                                <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">Destination File Path</label>
-                                <input type="text" id="i_path" name="file_path" placeholder="e.g. data/tokens.json" class="w-full px-5 py-4 rounded-xl text-sm font-mono focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500" required>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Destination File Path</label>
+                                <input type="text" id="i_path" name="file_path" placeholder="e.g. data/tokens.json" class="w-full px-5 py-4 rounded-xl text-sm font-mono focus:border-pink-500 focus:ring-1 focus:ring-pink-500" required>
                             </div>
                             <div>
-                                <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest block mb-2">Account DB Source</label>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-2">Account DB Source</label>
                                 <div class="relative">
-                                    <select id="i_acc" name="account_file" class="w-full px-5 py-4 rounded-xl text-sm appearance-none cursor-pointer focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500" required>
+                                    <select id="i_acc" name="account_file" class="w-full px-5 py-4 rounded-xl text-sm appearance-none cursor-pointer focus:border-pink-500 focus:ring-1 focus:ring-pink-500" required>
                                         <option value="" disabled selected>Select an uploaded .json file</option>
                                         {% for f in account_files %}<option value="{{ f.name }}">{{ f.name }}</option>{% endfor %}
                                     </select>
-                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-zinc-500">
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-8 flex justify-between">
-                            <button type="button" onclick="nextStep(1)" class="text-zinc-500 hover:text-zinc-300 font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-widest transition-all">Back</button>
-                            <button type="button" onclick="nextStep(3)" class="bg-zinc-800 text-zinc-200 hover:bg-zinc-700 border border-zinc-600 font-black py-3 px-8 rounded-xl text-xs uppercase tracking-widest transition-all shadow-sm">Next</button>
+                            <button type="button" onclick="nextStep(1)" class="text-slate-500 hover:text-slate-800 font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-widest transition-all">Back</button>
+                            <button type="button" onclick="nextStep(3)" class="bg-pink-100 text-pink-700 hover:bg-pink-200 font-black py-3 px-8 rounded-xl text-xs uppercase tracking-widest transition-all shadow-sm">Next</button>
                         </div>
                     </div>
                     <div id="step-3" class="wizard-step hidden">
                         <div>
                             <div class="flex justify-between items-center mb-4">
-                                <label class="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Execution Times</label>
-                                <span class="bg-zinc-900 text-zinc-400 text-[10px] font-bold px-2 py-1 rounded border border-zinc-700"><span id="tcCount">1</span>/8 SLOTS</span>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Execution Times</label>
+                                <span class="bg-pink-50 text-pink-600 text-[10px] font-bold px-2 py-1 rounded border border-pink-200"><span id="tcCount">1</span>/8 SLOTS</span>
                             </div>
                             <div id="timeSlotsContainer" class="grid grid-cols-2 gap-3 max-h-[160px] overflow-y-auto pr-2 pb-2">
                                 <div class="relative flex items-center group time-slot">
-                                    <input type="time" name="times[]" required class="w-full px-4 py-3 rounded-xl text-sm focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 text-center font-mono">
+                                    <input type="time" name="times[]" required class="w-full px-4 py-3 rounded-xl text-sm focus:border-pink-500 focus:ring-1 focus:ring-pink-500 text-center font-mono">
                                 </div>
                             </div>
                             <div class="flex gap-3 mt-4">
-                                <button type="button" id="btnMinus" onclick="removeTime()" class="w-12 h-12 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-500 hover:border-zinc-500 hover:text-zinc-300 flex items-center justify-center transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm">
+                                <button type="button" id="btnMinus" onclick="removeTime()" class="w-12 h-12 rounded-xl bg-pink-50 border border-pink-200 text-slate-400 hover:border-rose-400 hover:text-rose-500 flex items-center justify-center transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-sm">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M20 12H4"/></svg>
                                 </button>
-                                <button type="button" id="btnAdd" onclick="addTime()" class="flex-1 rounded-xl bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-zinc-300 font-black flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-xs tracking-widest shadow-sm">
+                                <button type="button" id="btnAdd" onclick="addTime()" class="flex-1 rounded-xl bg-pink-50 border border-pink-200 hover:border-pink-400 text-pink-600 font-black flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-xs tracking-widest shadow-sm">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"/></svg>
                                     ADD TIME SLOT
                                 </button>
                             </div>
                         </div>
-                        <div class="mt-8 pt-6 border-t border-zinc-800 flex justify-between">
-                            <button type="button" onclick="nextStep(2)" class="text-zinc-500 hover:text-zinc-300 font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-widest transition-all">Back</button>
-                            <button type="submit" id="start-sys-btn" class="gray-btn border border-zinc-600 text-white font-black py-3 px-8 rounded-xl text-xs uppercase tracking-widest transition-all transform hover:scale-105 shadow-lg">
+                        <div class="mt-8 pt-6 border-t border-pink-100 flex justify-between">
+                            <button type="button" onclick="nextStep(2)" class="text-slate-500 hover:text-slate-800 font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-widest transition-all">Back</button>
+                            <button type="submit" id="start-sys-btn" class="pink-btn text-white font-black py-3 px-8 rounded-xl text-xs uppercase tracking-widest transition-all transform hover:scale-105 shadow-lg">
                                 Start System
                             </button>
                         </div>
@@ -332,65 +330,65 @@
         </div>
     </div>
 
-    <div id="fileManagerModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] flex items-center justify-center p-4 opacity-0 transition-opacity duration-150">
-        <div class="bg-[#0a0a0a] border border-zinc-800 rounded-3xl w-full max-w-lg relative shadow-2xl transform scale-95 transition-transform duration-150" id="fileManagerContent">
-            <button type="button" onclick="closeFileManager()" class="absolute top-6 right-6 text-zinc-500 hover:text-red-400 bg-zinc-900 p-2 rounded-full transition-colors border border-zinc-700">
+    <div id="fileManagerModal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-md z-[60] flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white border border-pink-200 rounded-3xl w-full max-w-lg relative shadow-2xl transform scale-95 transition-transform duration-300" id="fileManagerContent">
+            <button type="button" onclick="closeFileManager()" class="absolute top-6 right-6 text-slate-400 hover:text-rose-600 bg-pink-50 p-2 rounded-full transition-colors border border-pink-200">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
             <div class="p-8">
-                <h2 class="text-xl font-black text-white uppercase mb-6 flex items-center gap-3 tracking-wider">
-                    <span class="bg-red-900/30 text-red-500 px-2 py-1 rounded text-xs border border-red-900/50">DEL</span>
+                <h2 class="text-xl font-black text-slate-800 uppercase mb-6 flex items-center gap-3 tracking-wider">
+                    <span class="bg-rose-100 text-rose-600 px-2 py-1 rounded text-xs border border-rose-200">DEL</span>
                     Manage Accounts
                 </h2>
                 
                 <div id="file-list-container" class="space-y-3 max-h-[350px] overflow-y-auto pr-2">
                     {% for f in account_files %}
-                    <div id="file-row-{{ f.name|replace('.', '-') }}" class="flex justify-between items-center p-4 bg-zinc-900 rounded-xl border border-zinc-800 shadow-sm transition-all duration-150">
+                    <div id="file-row-{{ f.name|replace('.', '-') }}" class="flex justify-between items-center p-4 bg-pink-50 rounded-xl border border-pink-100 shadow-sm transition-all">
                         <div>
-                            <p class="text-sm font-bold text-zinc-200 font-mono">{{ f.name }}</p>
-                            <p class="text-[10px] text-zinc-500 font-black tracking-widest mt-1">{{ f.count }} ACCOUNTS</p>
+                            <p class="text-sm font-bold text-slate-800 font-mono">{{ f.name }}</p>
+                            <p class="text-[10px] text-pink-500 font-black tracking-widest mt-1">{{ f.count }} ACCOUNTS</p>
                         </div>
-                        <button onclick="triggerDeleteConfirmation('{{ f.name }}')" class="bg-[#111] hover:bg-red-600 hover:text-white text-red-500 border border-zinc-700 hover:border-red-500 p-2.5 rounded-lg transition-all shadow-sm">
+                        <button onclick="triggerDeleteConfirmation('{{ f.name }}')" class="bg-white hover:bg-rose-500 hover:text-white text-rose-500 border border-rose-200 p-2.5 rounded-lg transition-all shadow-sm">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                         </button>
                     </div>
                     {% else %}
-                    <p id="no-files-msg" class="text-xs text-zinc-600 font-bold uppercase text-center py-6">No account files found.</p>
+                    <p id="no-files-msg" class="text-xs text-slate-500 font-bold uppercase text-center py-6">No account files found.</p>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="confirmDeleteModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-[80] flex items-center justify-center p-4 opacity-0 transition-opacity duration-150">
-        <div class="bg-[#0a0a0a] border border-red-900/50 rounded-3xl w-full max-w-sm relative shadow-2xl transform scale-95 transition-transform duration-150" id="confirmDeleteContent">
+    <div id="confirmDeleteModal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-md z-[80] flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white border border-rose-200 rounded-3xl w-full max-w-sm relative shadow-2xl transform scale-95 transition-transform duration-300" id="confirmDeleteContent">
             <div class="p-6 text-center">
-                <div class="w-16 h-16 bg-red-900/20 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-900/50 shadow-inner">
+                <div class="w-16 h-16 bg-rose-50 text-rose-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-rose-100 shadow-inner">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
                 </div>
-                <h3 class="text-lg font-black text-white uppercase mb-2">Confirm Deletion</h3>
-                <p class="text-[11px] text-red-500 font-bold tracking-wider mb-4 px-4">WARNING: Removed Files Cant be Restored.</p>
-                <p class="text-sm text-zinc-400 mb-6 font-medium">Are you sure you want to delete <br><span id="confirmDeleteFilename" class="font-mono font-bold text-red-400 bg-black px-2 py-0.5 rounded border border-zinc-800 inline-block mt-2"></span> ?</p>
+                <h3 class="text-lg font-black text-slate-800 uppercase mb-2">Confirm Deletion</h3>
+                <p class="text-[11px] text-rose-500 font-bold tracking-wider mb-4 px-4">WARNING: Removed Files Cant be Restored.</p>
+                <p class="text-sm text-slate-600 mb-6 font-medium">Are you sure you want to delete <br><span id="confirmDeleteFilename" class="font-mono font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-100 inline-block mt-2"></span> ?</p>
                 <div class="flex gap-3 justify-center">
-                    <button onclick="closeConfirmDelete()" class="px-5 py-2.5 rounded-xl text-xs font-bold text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-800 transition-colors uppercase tracking-wider border border-zinc-700">Cancel</button>
-                    <button id="executeDeleteBtn" class="px-5 py-2.5 rounded-xl text-xs font-black text-white bg-red-600 hover:bg-red-700 shadow-md shadow-red-900/50 transition-all uppercase tracking-wider transform hover:-translate-y-0.5 border border-red-500">Yes, Delete</button>
+                    <button onclick="closeConfirmDelete()" class="px-5 py-2.5 rounded-xl text-xs font-bold text-slate-500 hover:text-slate-700 bg-slate-50 hover:bg-slate-100 transition-colors uppercase tracking-wider border border-slate-200">Cancel</button>
+                    <button id="executeDeleteBtn" class="px-5 py-2.5 rounded-xl text-xs font-black text-white bg-rose-500 hover:bg-rose-600 shadow-md shadow-rose-500/30 transition-all uppercase tracking-wider transform hover:-translate-y-0.5">Yes, Delete</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="confirmTaskDeleteModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-[80] flex items-center justify-center p-4 opacity-0 transition-opacity duration-150">
-        <div class="bg-[#0a0a0a] border border-red-900/50 rounded-3xl w-full max-w-sm relative shadow-2xl transform scale-95 transition-transform duration-150" id="confirmTaskDeleteContent">
+    <div id="confirmTaskDeleteModal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-md z-[80] flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white border border-rose-300 rounded-3xl w-full max-w-sm relative shadow-2xl transform scale-95 transition-transform duration-300" id="confirmTaskDeleteContent">
             <div class="p-6 text-center">
-                <div class="w-16 h-16 bg-red-900/20 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-900/50 shadow-inner">
+                <div class="w-16 h-16 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-rose-200 shadow-inner">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                 </div>
-                <h3 class="text-lg font-black text-white uppercase mb-2">Terminate Automation</h3>
-                <p class="text-[11px] text-red-500 font-bold tracking-wider mb-4 px-4">WARNING: This will stop all cron jobs instantly.</p>
-                <p class="text-sm text-zinc-400 mb-6 font-medium">Are you sure you want to wipe Task ID:<br><span id="confirmTaskDeleteId" class="font-mono font-bold text-red-400 bg-black px-3 py-1 rounded-lg border border-zinc-800 inline-block mt-2"></span> ?</p>
+                <h3 class="text-lg font-black text-slate-800 uppercase mb-2">Terminate Automation</h3>
+                <p class="text-[11px] text-rose-600 font-bold tracking-wider mb-4 px-4">WARNING: This will stop all cron jobs instantly.</p>
+                <p class="text-sm text-slate-600 mb-6 font-medium">Are you sure you want to wipe Task ID:<br><span id="confirmTaskDeleteId" class="font-mono font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-lg border border-rose-200 inline-block mt-2"></span> ?</p>
                 <div class="flex gap-3 justify-center">
-                    <button onclick="closeConfirmTaskDelete()" class="px-5 py-2.5 rounded-xl text-xs font-bold text-zinc-400 hover:text-white bg-zinc-900 hover:bg-zinc-800 transition-colors uppercase tracking-wider border border-zinc-700">Abort</button>
-                    <button id="executeTaskDeleteBtn" class="px-5 py-2.5 rounded-xl text-xs font-black text-white bg-red-600 hover:bg-red-700 shadow-md shadow-red-900/50 transition-all uppercase tracking-wider transform hover:-translate-y-0.5 border border-red-500">Yes, Wipe System</button>
+                    <button onclick="closeConfirmTaskDelete()" class="px-5 py-2.5 rounded-xl text-xs font-bold text-slate-500 hover:text-slate-700 bg-slate-50 hover:bg-slate-100 transition-colors uppercase tracking-wider border border-slate-200">Abort</button>
+                    <button id="executeTaskDeleteBtn" class="px-5 py-2.5 rounded-xl text-xs font-black text-white bg-rose-600 hover:bg-rose-700 shadow-md shadow-rose-600/30 transition-all uppercase tracking-wider transform hover:-translate-y-0.5">Yes, Wipe System</button>
                 </div>
             </div>
         </div>
@@ -403,19 +401,19 @@
         const socket = io();
 
         // --- CYBERPUNK CONSOLE STYLES ---
-        const devLogMain = 'background: #09090b; color: #e5e5e5; font-weight: 900; font-size: 14px; padding: 6px 12px; border-radius: 4px; border-left: 4px solid #71717a;';
-        const devLogSub = 'color: #71717a; font-family: monospace; font-size: 11px; font-weight: bold;';
-        console.log('%c⚡ S26X MATRIX INITIALIZED', devLogMain);
+        const devLogMain = 'background: #1e293b; color: #ec4899; font-weight: 900; font-size: 14px; padding: 6px 12px; border-radius: 4px; border-left: 4px solid #f43f5e;';
+        const devLogSub = 'color: #64748b; font-family: monospace; font-size: 11px; font-weight: bold;';
+        console.log('%c⚡ DEVIL 100K MATRIX INITIALIZED', devLogMain);
         console.log('%c[SYS_INFO] WebSocket data stream hooked to isolated node: @' + currentUser, devLogSub);
 
         window.addEventListener('load', () => {
             setTimeout(() => {
-                const overlay = document.getElementById('pageS26xOverlay');
+                const overlay = document.getElementById('pageDevilOverlay');
                 if (overlay) {
                     overlay.classList.add('hidden-overlay');
-                    setTimeout(() => overlay.remove(), 200); 
+                    setTimeout(() => overlay.remove(), 400); 
                 }
-            }, 600); 
+            }, 1000); 
         });
 
         const fixedMessage = "Server Is Connected SuccessFully";
@@ -424,7 +422,7 @@
         function type() {
             const el = document.getElementById('typewriter');
             if(!el) return;
-            if (j < fixedMessage.length) { el.innerText = fixedMessage.substring(0, j + 1); j++; setTimeout(type, 20); }
+            if (j < fixedMessage.length) { el.innerText = fixedMessage.substring(0, j + 1); j++; setTimeout(type, 50); }
         }
         document.addEventListener("DOMContentLoaded", type);
 
@@ -448,18 +446,18 @@
             const baseStr = currentText.split('<')[0].trim();
             if (baseStr == endValue) return;
 
-            obj.style.transform = "scale(1.1)";
-            obj.style.color = "#fff";
+            obj.style.transform = "scale(1.2)";
+            obj.style.color = "#ec4899";
             
             setTimeout(() => {
                 if(hasHTML) {
-                    obj.innerHTML = `${endValue} <span class="text-[10px] text-zinc-500 tracking-widest font-bold -ml-1">TOKENS</span>`;
+                    obj.innerHTML = `${endValue} <span class="text-[10px] text-pink-500 tracking-widest font-bold -ml-1">TOKENS</span>`;
                 } else {
                     obj.innerHTML = endValue;
                 }
                 obj.style.transform = "scale(1)";
                 obj.style.color = ""; 
-            }, 100);
+            }, 150);
         }
 
         socket.on('stats_update', (data) => {
@@ -479,23 +477,24 @@
 
             statusBadge.innerText = data.new_state;
             if (data.new_state === 'Stopped') {
-                statusBadge.className = "text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase bg-red-900/30 text-red-400 border border-red-900/50";
+                statusBadge.className = "text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase bg-rose-100 text-rose-600 border border-rose-200";
                 card.classList.add('task-stopped');
-                btn.innerHTML = `<svg class="w-5 h-5 text-zinc-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
+                btn.innerHTML = `<svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
             } else {
-                statusBadge.className = "text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase bg-zinc-800 text-zinc-300 border border-zinc-600";
+                statusBadge.className = "text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase bg-green-100 text-green-600 border border-green-200";
                 card.classList.remove('task-stopped');
-                btn.innerHTML = `<svg class="w-5 h-5 text-zinc-300" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+                btn.innerHTML = `<svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
             }
         });
 
+        // Triggered via WebSocket without page refresh!
         socket.on('task_deleted', (data) => {
             if (data.client_name !== currentUser) return;
             const card = document.getElementById(`task-card-${data.task_id}`);
             if(card) {
                 card.style.opacity = '0';
-                card.style.transform = 'scale(0.95)';
-                setTimeout(() => { card.remove(); checkGridState(); showTaskDeleteToast(data.task_id); }, 150);
+                card.style.transform = 'scale(0.9)';
+                setTimeout(() => { card.remove(); checkGridState(); showTaskDeleteToast(data.task_id); }, 300);
             }
         });
 
@@ -513,12 +512,12 @@
             
             const safeId = data.filename.replace(/\./g, '-');
             const html = `
-                <div id="file-row-${safeId}" class="flex justify-between items-center p-4 bg-zinc-900 rounded-xl border border-zinc-800 shadow-sm transition-all duration-150">
+                <div id="file-row-${safeId}" class="flex justify-between items-center p-4 bg-pink-50 rounded-xl border border-pink-100 shadow-sm transition-all">
                     <div>
-                        <p class="text-sm font-bold text-zinc-200 font-mono">${data.filename}</p>
-                        <p class="text-[10px] text-zinc-500 font-black tracking-widest mt-1">${data.count || 0} ACCOUNTS</p>
+                        <p class="text-sm font-bold text-slate-800 font-mono">${data.filename}</p>
+                        <p class="text-[10px] text-pink-500 font-black tracking-widest mt-1">${data.count || 0} ACCOUNTS</p>
                     </div>
-                    <button onclick="triggerDeleteConfirmation('${data.filename}')" class="bg-[#111] hover:bg-red-600 hover:text-white text-red-500 border border-zinc-700 hover:border-red-500 p-2.5 rounded-lg transition-all shadow-sm">
+                    <button onclick="triggerDeleteConfirmation('${data.filename}')" class="bg-white hover:bg-rose-500 hover:text-white text-rose-500 border border-rose-200 p-2.5 rounded-lg transition-all shadow-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a 1 1 0 00-1 1v3M4 7h16" /></svg>
                     </button>
                 </div>`;
@@ -535,7 +534,7 @@
             if(row) {
                 row.style.opacity = '0';
                 row.style.transform = 'scale(0.95)';
-                setTimeout(() => row.remove(), 150);
+                setTimeout(() => row.remove(), 300);
             }
         });
 
@@ -545,50 +544,50 @@
             const t = data.task;
             
             let timesHTML = '';
-            t.times.forEach(time => { timesHTML += `<span class="text-[10px] font-bold bg-[#111] text-zinc-300 px-2.5 py-1 rounded border border-zinc-700 shadow-sm">${time}</span>`; });
+            t.times.forEach(time => { timesHTML += `<span class="text-[10px] font-bold bg-white text-pink-600 px-2.5 py-1 rounded border border-pink-200 shadow-sm">${time}</span>`; });
 
             const cardHTML = `
-                <div id="task-card-${t.id}" class="glass-card rounded-3xl p-6 flex flex-col justify-between relative group opacity-0 transform scale-95 transition-all duration-200">
+                <div id="task-card-${t.id}" class="glass-card rounded-3xl p-6 flex flex-col justify-between relative group opacity-0 transform scale-95 transition-all duration-500">
                     <div class="flex justify-between items-start mb-6">
                         <div>
                             <div class="flex items-center gap-3">
-                                <span class="text-[10px] font-black text-zinc-400 bg-zinc-900 px-2 py-1 rounded border border-zinc-800">ID: ${t.id}</span>
-                                <span id="status-badge-${t.id}" class="text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase bg-zinc-800 text-zinc-300 border border-zinc-600">${t.status}</span>
+                                <span class="text-[10px] font-black text-slate-700 bg-pink-50 px-2 py-1 rounded border border-pink-200">ID: ${t.id}</span>
+                                <span id="status-badge-${t.id}" class="text-[10px] font-black px-2 py-1 rounded tracking-widest uppercase bg-green-100 text-green-600 border border-green-200">${t.status}</span>
                             </div>
-                            <h3 class="font-black text-xl text-white mt-3 truncate max-w-[250px]" title="${t.repo_name}">${t.repo_name}</h3>
+                            <h3 class="font-black text-xl text-slate-800 mt-3 truncate max-w-[250px]" title="${t.repo_name}">${t.repo_name}</h3>
                         </div>
                         <div class="flex gap-2">
-                            <button onclick="toggleTask('${t.id}')" id="toggle-btn-${t.id}" class="bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-zinc-400 p-2.5 rounded-xl transition-all shadow-sm">
-                                <svg class="w-5 h-5 text-zinc-300" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                            <button onclick="toggleTask('${t.id}')" id="toggle-btn-${t.id}" class="bg-pink-50 hover:bg-pink-100 border border-pink-200 text-slate-600 p-2.5 rounded-xl transition-all shadow-sm">
+                                <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
                             </button>
-                            <button onclick="triggerTaskDeleteConfirmation('${t.id}')" class="bg-zinc-900 hover:bg-red-900/30 border border-zinc-700 hover:border-red-900/50 text-zinc-500 hover:text-red-400 p-2.5 rounded-xl transition-all shadow-sm">
+                            <button onclick="triggerTaskDeleteConfirmation('${t.id}')" class="bg-pink-50 hover:bg-rose-100 border border-pink-200 hover:border-rose-300 text-slate-400 hover:text-rose-600 p-2.5 rounded-xl transition-all shadow-sm">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                             </button>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mb-6">
-                        <div class="bg-zinc-900/50 p-3 rounded-xl border border-zinc-800">
-                            <p class="text-[9px] text-zinc-500 font-bold uppercase mb-1">Target</p>
-                            <p class="text-xs text-zinc-300 font-mono truncate font-bold">${t.file_path.split('/').pop()}</p>
+                        <div class="bg-pink-50 p-3 rounded-xl border border-pink-100">
+                            <p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Target</p>
+                            <p class="text-xs text-slate-800 font-mono truncate font-bold">${t.file_path.split('/').pop()}</p>
                         </div>
-                        <div class="bg-zinc-900/50 p-3 rounded-xl border border-zinc-800">
-                            <p class="text-[9px] text-zinc-500 font-bold uppercase mb-1">Source</p>
-                            <p class="text-xs text-zinc-300 font-mono truncate font-bold">${t.account_file}</p>
+                        <div class="bg-pink-50 p-3 rounded-xl border border-pink-100">
+                            <p class="text-[9px] text-slate-500 font-bold uppercase mb-1">Source</p>
+                            <p class="text-xs text-slate-800 font-mono truncate font-bold">${t.account_file}</p>
                         </div>
                     </div>
 
                     <div class="mb-6"><div class="flex flex-wrap gap-2">${timesHTML}</div></div>
 
-                    <div class="pt-4 border-t border-zinc-800 flex justify-between items-center">
+                    <div class="pt-4 border-t border-pink-100 flex justify-between items-center">
                         <div>
-                            <p id="sync-text-${t.id}" class="text-[10px] font-bold text-zinc-500 uppercase flex items-center gap-1">SYNC: ${t.last_run}</p>
+                            <p id="sync-text-${t.id}" class="text-[10px] font-bold text-slate-500 uppercase flex items-center gap-1">SYNC: ${t.last_run}</p>
                             <div class="flex items-baseline gap-3 mt-1">
-                                <div id="token-count-${t.id}" class="text-3xl font-black text-white stat-value">${t.last_count} <span class="text-[10px] text-zinc-500 tracking-widest font-bold -ml-1">TOKENS</span></div>
-                                <div id="ban-count-${t.id}" class="text-xs font-black text-red-500">BAN: ${t.last_ban_count || 0}</div>
+                                <div id="token-count-${t.id}" class="text-3xl font-black text-slate-800 stat-value">${t.last_count} <span class="text-[10px] text-pink-500 tracking-widest font-bold -ml-1">TOKENS</span></div>
+                                <div id="ban-count-${t.id}" class="text-xs font-black text-rose-600">BAN: ${t.last_ban_count || 0}</div>
                             </div>
                         </div>
-                        <button id="instant-btn-${t.id}" onclick="instantSync('${t.id}')" class="gray-btn border border-zinc-700 text-white px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2 shadow-md">
+                        <button id="instant-btn-${t.id}" onclick="instantSync('${t.id}')" class="pink-btn text-white px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all flex items-center gap-2 shadow-md">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> INSTANT
                         </button>
                     </div>
@@ -613,9 +612,9 @@
 
             const syncElement = document.getElementById(`sync-text-${data.task_id}`);
             if(syncElement) {
-                syncElement.style.color = "#d4d4d8";
+                syncElement.style.color = "#ec4899";
                 syncElement.innerText = `SYNC: ${data.last_run}`;
-                setTimeout(() => syncElement.style.color = "", 200);
+                setTimeout(() => syncElement.style.color = "", 300);
             }
             const btn = document.getElementById(`instant-btn-${data.task_id}`);
             if(btn) { btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg> INSTANT`; btn.disabled = false; }
@@ -646,7 +645,7 @@
             const modal = document.getElementById('fileManagerModal');
             const content = document.getElementById('fileManagerContent');
             modal.classList.add('opacity-0'); content.classList.add('scale-95');
-            setTimeout(() => { modal.classList.add('hidden'); }, 150);
+            setTimeout(() => { modal.classList.add('hidden'); }, 300);
         }
 
         function showUploadToast(filename, count) {
@@ -656,23 +655,24 @@
             document.getElementById('toastCount').innerText = count;
             
             toast.classList.remove('translate-x-[150%]', 'opacity-0');
-            setTimeout(() => { toast.classList.add('translate-x-[150%]', 'opacity-0'); }, 3000); 
+            setTimeout(() => { toast.classList.add('translate-x-[150%]', 'opacity-0'); }, 5000); 
         }
 
         function showDeleteToast(filename) {
             const toast = document.getElementById('deleteToast');
             document.getElementById('delToastFile').innerText = filename;
             toast.classList.remove('translate-x-[150%]', 'opacity-0');
-            setTimeout(() => { toast.classList.add('translate-x-[150%]', 'opacity-0'); }, 3000); 
+            setTimeout(() => { toast.classList.add('translate-x-[150%]', 'opacity-0'); }, 5000); 
         }
 
         function showTaskDeleteToast(taskId) {
             const toast = document.getElementById('taskDeleteToast');
             document.getElementById('delToastTaskId').innerText = taskId;
             toast.classList.remove('translate-x-[150%]', 'opacity-0');
-            setTimeout(() => { toast.classList.add('translate-x-[150%]', 'opacity-0'); }, 3000); 
+            setTimeout(() => { toast.classList.add('translate-x-[150%]', 'opacity-0'); }, 5000); 
         }
 
+        // --- CUSTOM IN-BOX TASK DELETE MODAL HANDLERS ---
         let pendingDeleteTaskId = null;
 
         function triggerTaskDeleteConfirmation(id) {
@@ -688,7 +688,7 @@
             const modal = document.getElementById('confirmTaskDeleteModal');
             const content = document.getElementById('confirmTaskDeleteContent');
             modal.classList.add('opacity-0'); content.classList.add('scale-95');
-            setTimeout(() => { modal.classList.add('hidden'); pendingDeleteTaskId = null; }, 150);
+            setTimeout(() => { modal.classList.add('hidden'); pendingDeleteTaskId = null; }, 300);
         }
 
         document.getElementById('executeTaskDeleteBtn').addEventListener('click', async () => {
@@ -711,6 +711,7 @@
             }
         });
 
+        // --- CUSTOM IN-BOX FILE DELETE MODAL HANDLERS ---
         let pendingDeleteFile = null;
 
         function triggerDeleteConfirmation(filename) {
@@ -727,7 +728,7 @@
             const modal = document.getElementById('confirmDeleteModal');
             const content = document.getElementById('confirmDeleteContent');
             modal.classList.add('opacity-0'); content.classList.add('scale-95');
-            setTimeout(() => { modal.classList.add('hidden'); pendingDeleteFile = null; }, 150);
+            setTimeout(() => { modal.classList.add('hidden'); pendingDeleteFile = null; }, 300);
         }
 
         document.getElementById('executeDeleteBtn').addEventListener('click', async () => {
@@ -800,7 +801,7 @@
         }
         function closeWizard() {
             modal.classList.add('opacity-0'); modalContent.classList.add('scale-95');
-            setTimeout(() => { modal.classList.add('hidden'); }, 150);
+            setTimeout(() => { modal.classList.add('hidden'); }, 300);
         }
         function nextStep(step) {
             if(step === 2 && currentStep === 1) { if(!document.getElementById('i_token').value || !document.getElementById('i_repo').value) { document.getElementById('i_token').reportValidity(); return; } }
@@ -810,7 +811,7 @@
             document.getElementById(`step-${step}`).classList.remove('hidden');
             for(let i=1; i<=3; i++) {
                 const ind = document.getElementById(`ind-${i}`);
-                if(i <= step) { ind.classList.replace('bg-zinc-800', 'bg-zinc-400'); } else { ind.classList.replace('bg-zinc-400', 'bg-zinc-800'); }
+                if(i <= step) { ind.classList.replace('bg-pink-100', 'bg-pink-500'); } else { ind.classList.replace('bg-pink-500', 'bg-pink-100'); }
             }
         }
         function updateTimeUI() {
@@ -824,7 +825,7 @@
                 const container = document.getElementById('timeSlotsContainer');
                 const div = document.createElement('div');
                 div.className = 'relative flex items-center group time-slot';
-                div.innerHTML = `<input type="time" name="times[]" required class="w-full px-4 py-3 rounded-xl text-sm focus:border-zinc-500 focus:ring-1 focus:ring-zinc-500 text-center font-mono">`;
+                div.innerHTML = `<input type="time" name="times[]" required class="w-full px-4 py-3 rounded-xl text-sm focus:border-pink-500 focus:ring-1 focus:ring-pink-500 text-center font-mono">`;
                 container.appendChild(div);
                 updateTimeUI();
             }
