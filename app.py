@@ -27,7 +27,7 @@ socketio = SocketIO(app, async_mode='eventlet', cors_allowed_origins="*")
 
 # --- SECURITY & CONFIGURATION ---
 app.secret_key = "devil_super_secret_session_key_do_not_share"
-ADMIN_KEY = "S26X" 
+ADMIN_KEY = "XDEVIL" 
 
 USERS_FILE = os.path.join(BASE_DIR, 'users.json')
 JWT_SETTING_FILE = os.path.join(BASE_DIR, 'Jwt_api_setting.txt')
@@ -486,5 +486,5 @@ def upload():
 
 if __name__ == '__main__':
     assigned_port = int(os.environ.get('SERVER_PORT', os.environ.get('PORT', 22468)))
-    print(f"[*] Production Storage Server running on http://0.0.0.0:{assigned_port}")
+    print(f"[*] Production Storage Server running on http://127.0.0.1:{assigned_port}")
     socketio.run(app, host='0.0.0.0', port=assigned_port)
