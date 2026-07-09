@@ -5,6 +5,6 @@ Api4: https://jwt-generator-3.vercel.app/api/token
 Api5: https://jwt-generator-4.vercel.app/api/token
 Api6: https://jwt-generator-5.vercel.app/api/token
 Api7: https://jwt-generator-6.vercel.app/api/token
-Api8: https://arafatxjwtobb8.vercel.app/api/token
-Api9: https://arafatxjwtobb9.vercel.app/api/token
-Api10: https://arafatxjwtobb10.vercel.app/api/token
+Api8: https://jwt-generator-chi.vercel.app/api/token
+Api9: http://jwt-generator-7.vercel.app/api/token
+Api10: https://jwt-generator-8.vercel.app/api/token
